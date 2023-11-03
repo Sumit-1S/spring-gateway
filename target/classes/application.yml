@@ -15,6 +15,10 @@ spring:
           predicates:
             - Path=/policyOwnedApp/**
           uri: lb://policy-owned-service/
+        - id: policyApp
+          predicates:
+            - Path=/policyApp/**
+          uri: lb://policy-service/
 eureka:
   client:
     service-url:
